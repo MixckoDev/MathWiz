@@ -6,9 +6,9 @@ def generate_question():
     num2 = random.randint(1, 100)
     operation = random.choice(operations)
 
-    # Avoid division by zero
+   
     if operation == "/":
-        num1 = num1 * num2  # Ensure divisible numbers
+        num1 = num1 * num2  
 
     question = f"{num1} {operation} {num2}"
     correct_answer = eval(question)
@@ -25,7 +25,7 @@ def main():
         print(question)
         try:
             user_answer = float(input("Your answer: "))
-            if abs(user_answer - correct_answer) < 0.01:  # Allow a small margin for float comparisons
+            if abs(user_answer - correct_answer) < 0.01: 
                 print("Correct!")
                 correct += 1
             else:
